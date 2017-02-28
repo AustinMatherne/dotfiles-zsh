@@ -2,9 +2,6 @@
 source ~/.zplug/init.zsh
 zplug load
 
-# LS_COLORS
-eval $(dircolors -b $HOME/.ls_colors/LS_COLORS)
-
 # fzf
 export FZF_DEFAULT_OPTS='--height 40% --reverse --border'
 export FZF_COMPLETION_TRIGGER=,,
@@ -13,16 +10,22 @@ export FZF_COMPLETION_TRIGGER=,,
 # The Fuck
 eval '$(thefuck --alias)'
 
-# git-extras auto completion.
-source ~/.git-extras/etc/git-extras-completion.zsh
+if [ "$HOST" != "USAL0157" ]; then
+  # git-extras auto completion.
+  source ~/.git-extras/etc/git-extras-completion.zsh
 
-if [ "$HOST" = "pangoDesktop" ]; then
+  # LS_COLORS
+  eval $(dircolors -b $HOME/.ls_colors/LS_COLORS)
+
+fi
+
+if [ "$HOST" != "pangoDev" ]; then
   # Base16 Shell
   BASE16_SHELL=$HOME/.config/base16-shell/
   eval "$($BASE16_SHELL/profile_helper.sh)"
 fi
 
-if [ "$HOST" = "pangoDev" ]; then
+if [ "$HOST" != "pangoDesktop" ]; then
   # gibo-completion
   source ~/.gibo/gibo-completion.zsh
 
@@ -46,7 +49,7 @@ if [ "$HOST" = "pangoDev" ]; then
   export PATH="$HOME/.cargo/bin:$PATH"
 
   # NVM
-  export NVM_DIR="/home/austinmatherne/.nvm"
+  export NVM_DIR="$HOME/.nvm"
   [ -s "$NVM_DIR/nvm.sh" ] && source "$NVM_DIR/nvm.sh"
 fi
 
