@@ -42,11 +42,6 @@ zstyle ':completion:*' rehash true
 # Ensure path arrays do not contain duplicates
 typeset -gU cdpath fpath mailpath path
 
-# Set zsh completion directories
-fpath=(
-  $fpath
-)
-
 # Zsh variables
 export HISTFILE=${HOME}/.zhistory
 export HISTSIZE=10000
@@ -146,6 +141,15 @@ alias t='tree -ACDash'
 
 # Alias for shorter history command
 alias h='history'
+
+# Alias for gulp server
+alias up='npm install && gulp && gulp serve'
+
+# Alias for gulp testing
+alias t='gulp test:auto'
+
+# Alias for local-gateay
+alias lg="cd $HOME/repos/local-gateway && ./local-gateway.sh"
 
 # Alias for creating a directory and immediately changing into it
 function take() {
