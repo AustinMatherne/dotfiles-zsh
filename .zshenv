@@ -146,7 +146,7 @@ alias h='history'
 alias up='npm install && gulp && gulp serve'
 
 # Alias for gulp testing
-alias t='gulp test:auto'
+alias t='gulp test'
 
 # Alias for local-gateay
 alias lg="cd $HOME/repos/local-gateway && ./local-gateway.sh"
