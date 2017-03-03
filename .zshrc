@@ -25,10 +25,12 @@ if [ "$HOST" != "pangoDev" ]; then
   eval "$($BASE16_SHELL/profile_helper.sh)"
 fi
 
-if [ "$HOST" != "pangoDesktop" ]; then
+if [ "$HOST" = "pangoDev" ]; then
   # gibo-completion
   source ~/.gibo/gibo-completion.zsh
+fi
 
+if [ "$HOST" != "pangoDesktop" ]; then
   # Heroku Toolbelt
   export PATH="/usr/local/heroku/bin:$PATH"
 
