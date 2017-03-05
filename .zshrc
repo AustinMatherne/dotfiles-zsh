@@ -16,7 +16,6 @@ if [ "$HOST" != "USAL0157" ]; then
 
   # LS_COLORS
   eval $(dircolors -b $HOME/.ls_colors/LS_COLORS)
-
 fi
 
 if [ "$HOST" != "pangoDev" ]; then

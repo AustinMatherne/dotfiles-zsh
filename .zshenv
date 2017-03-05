@@ -136,20 +136,25 @@ alias v=vim
 # Alias for shorter git
 alias g=git
 
+# Alias for httpie with https
+alias https='http --default-scheme=https'
+
 # Alias for improved tree command
 alias t='tree -ACDash'
 
 # Alias for shorter history command
 alias h='history'
 
-# Alias for gulp server
-alias up='npm install && gulp && gulp serve'
+if [ "$HOST" = "USAL0157" ]; then
+  # Alias for gulp server
+  alias up='npm install && gulp && gulp serve'
 
-# Alias for gulp testing
-alias t='gulp test'
+  # Alias for gulp testing
+  alias t='gulp test'
 
-# Alias for local-gateay
-alias lg="cd $HOME/repos/local-gateway && ./local-gateway.sh"
+  # Alias for local-gateay
+  alias lg="cd $HOME/repos/local-gateway && ./local-gateway.sh"
+fi
 
 # Alias for creating a directory and immediately changing into it
 function take() {
