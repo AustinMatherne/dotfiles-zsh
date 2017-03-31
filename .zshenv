@@ -147,10 +147,13 @@ alias h='history'
 
 if [ "$HOST" = "USAL0157" ]; then
   # Alias for gulp server
-  alias up='npm install && gulp && gulp serve'
+  alias up='yarn install --no-lockfile && gulp && gulp serve'
 
   # Alias for gulp testing
   alias t='gulp test'
+
+  # Alias for gulp watch testing
+  alias ta='gulp test:auto'
 
   # Alias for local-gateay
   alias lg="cd $HOME/repos/local-gateway && ./local-gateway.sh"
