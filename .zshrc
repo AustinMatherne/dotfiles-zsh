@@ -8,7 +8,7 @@ export FZF_COMPLETION_TRIGGER=,,
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # The Fuck
-eval '$(thefuck --alias)'
+eval $(thefuck --alias)
 
 if [ "$HOST" != "USAL0157" ]; then
   # git-extras auto completion.
