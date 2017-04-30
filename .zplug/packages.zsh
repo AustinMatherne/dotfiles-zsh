@@ -49,11 +49,8 @@ zplug "hchbaw/zce.zsh"
 # ssh helper
 zplug "gko/ssh-connect"
 
-# ssh agent
-zplug "modules/ssh", from:prezto
-
-# gpg agent
-zplug "modules/gpg", from:prezto
+# gpg-agent
+zplug "axtl/gpg-agent.zsh"
 
 # Window titles
 zplug "jreese/zsh-titles"
