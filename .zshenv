@@ -107,6 +107,9 @@ export KEYTIMEOUT=1
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
+# Angular CLI completions
+. <(ng completion --zsh)
+
 # Auto suggestions
 bindkey '^ ' autosuggest-accept
 
@@ -147,7 +150,7 @@ alias h='history'
 
 if [ "$HOST" = "USAL0157" ]; then
   # Alias for gulp server
-  alias up='yarn install --no-lockfile && gulp && gulp serve'
+  alias up='yarn install --no-lockfile && gulp clean && gulp serve --max-old-space-size=8192'
 
   # Alias for gulp testing
   alias t='gulp test'
