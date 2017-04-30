@@ -107,9 +107,6 @@ export KEYTIMEOUT=1
 fpath=(~/.zsh/completions $fpath)
 autoload -U compinit && compinit
 
-# Angular CLI completions
-. <(ng completion --zsh)
-
 # Auto suggestions
 bindkey '^ ' autosuggest-accept
 

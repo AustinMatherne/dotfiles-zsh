@@ -55,5 +55,8 @@ if [ "$HOST" != "pangoDesktop" ]; then
 
   # yarn
   export PATH="$PATH:`yarn global bin`"
+
+  # Angular CLI completions
+  . <(ng completion --zsh)
 fi
 
