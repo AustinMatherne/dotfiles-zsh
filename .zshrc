@@ -56,6 +56,11 @@ if [ "$HOST" != "pangoDesktop" ]; then
   # yarn
   export PATH="$PATH:`yarn global bin`"
 
+
+  # tabtab source for yarn package
+  # uninstall by removing these lines or running `tabtab uninstall yarn`
+  [[ -f /Users/amather/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh ]] && . /Users/amather/.config/yarn/global/node_modules/tabtab/.completions/yarn.zsh
+
   # Angular CLI completions
   . <(ng completion --zsh)
 fi
