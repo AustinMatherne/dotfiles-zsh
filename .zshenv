@@ -147,7 +147,7 @@ alias h='history'
 
 if [ "$HOST" = "USAL0157" ]; then
   # Alias for gulp server
-  alias up='yarn install --no-lockfile && gulp clean && gulp serve --max-old-space-size=8192'
+  alias up='yarn && gulp clean && gulp serve --max-old-space-size=8192'
 
   # Alias for gulp testing
   alias t='gulp test'
